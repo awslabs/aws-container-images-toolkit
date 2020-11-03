@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# set -o errexit
 set -o errtrace
 set -o pipefail
 
@@ -9,7 +8,7 @@ function detect() {
 tdir=$(dirname $TARGET_DIR)/$(basename $TARGET_DIR)
 
 # iterate over all Dockerfiles and list images:
-filelist=($(find . -type f -name Dockerfile\*))
+filelist=($(find ${tdir} -type f -name Dockerfile\*))
 
 for dockerfile in ${filelist[*]}; do
   images=$(grep "^FROM" $dockerfile | grep -E -o [^[:space:]]+:[^[:space:]]+) 
