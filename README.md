@@ -1,17 +1,24 @@
-## My Project
+# Public Container Images Detector
 
-TODO: Fill this README out!
+This tool allows you to scan repositories and container orchestrators for
+public container images hosted in Docker Hub.
 
-Be sure to:
 
-* Change the title in this README
-* Edit your repository description on GitHub
+## Install
 
-## Security
+In order to use the detector, either clone this repo or download it
+and extract it locally.
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+## Use
 
-## License
+### In Dockerfiles
 
-This project is licensed under the Apache-2.0 License.
+Please have a look at the [from source](source/) part for usage details.
 
+### ECS
+
+Please have a look at the [ECS](ecs/) part for usage details.
+
+### Kubernetes
+
+Please have a look at the [Kubernetes](kubernetes/) part for usage details.
