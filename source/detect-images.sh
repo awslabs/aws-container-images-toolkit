@@ -23,9 +23,7 @@ for dockerfile in ${filelist[*]}; do
 done
 }
 
-
 ### MAIN
-CURRENT_DIR=$(pwd)
-TARGET_DIR=${1:-$CURRENT_DIR}
+TARGET_DIR=${1:-$PWD}
 
 detect
