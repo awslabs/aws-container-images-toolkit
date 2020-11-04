@@ -9,6 +9,7 @@ The script will use your current AWS CLI credentials to find ECS clusters and re
 $ ./detect-images.sh
 
 arn:aws:ecs:us-west-2:123456789012:cluster/myECSCluster amazon/aws-xray-daemon
+arn:aws:ecs:us-west-2:123456789012:cluster/exampleCluster amazon/aws-xray-daemon:latest
 arn:aws:ecs:us-west-2:123456789012:cluster/exampleCluster nginx:latest
 ```
 
@@ -22,6 +23,7 @@ for prof in $(aws configure list-profiles); do
 done
 
 profile1 arn:aws:ecs:us-east-1:123456789012:cluster/myECSCluster amazon/aws-xray-daemon
+profile1 arn:aws:ecs:us-east-1:123456789012:cluster/exampleCluster amazon/aws-xray-daemon:latest
 profile1 arn:aws:ecs:us-east-1:123456789012:cluster/exampleCluster nginx:latest
 profile2 arn:aws:ecs:us-west-2:123456789012:cluster/myDemoCluster adam9098/ecsdemo-crystal
 profile2 arn:aws:ecs:us-west-2:123456789012:cluster/myDemoCluster adam9098/ecsdemo-frontend
