@@ -22,3 +22,7 @@ Please have a look at the [ECS](ecs/) part for usage details.
 ### Kubernetes
 
 Please have a look at the [Kubernetes](kubernetes/) part for usage details.
+
+### CodeBuild
+
+Please have a look at the [CodeBuild](codebuild/) part for usage details.
