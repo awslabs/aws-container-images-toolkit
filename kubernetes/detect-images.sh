@@ -20,7 +20,7 @@ function detectForMachine() {
     # Note that the following is based on the command from the upstream docs, see:
     # https://kubernetes.io/docs/tasks/access-application-cluster/list-all-running-container-images/
     dhimages=()
-    allimages=$(kubectl get pods --all-namespaces -o jsonpath="{.items[*].spec.containers[*].image}" | tr -s " " "\n" | sort -u)
+    allimages=$(kubectl get pods --all-namespaces -o jsonpath="{..image}" | tr -s " " "\n" | sort -u)
 
     for i in ${allimages[*]}
     do
