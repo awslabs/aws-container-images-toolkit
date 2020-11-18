@@ -12,7 +12,7 @@ If a Dockerfile has multiple `FROM` images each one will be printed.
 
 ## Examples
 
-Run the script to recursively detech Dockerfiles in your current directory.
+Run the script to recursively detect Dockerfiles in your current directory.
 
 ```
 ./detect-images.sh
