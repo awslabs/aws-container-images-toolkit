@@ -67,7 +67,7 @@ for cluster in $clusters; do
         fi
     done
 
-    if [[ ! -z "${dhimages[@]+"${dhimages[@]}"}" ]]; then
+    if [[ ! -z "${dhimages[*]+"${dhimages[*]}"}" ]]; then
         for image in ${dhimages[*]}; do
             echo "$cluster $image"
         done
