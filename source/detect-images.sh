@@ -19,8 +19,10 @@ for dockerfile in ${filelist[*]}; do
      for registry in $registrylist; do
       if ! echo $image | awk -F '[/:]' '{print $1}' | grep -q '\.'; then
         echo "$dockerfile $image"
+        break
       elif echo $image | grep -q $registry ; then
         echo "$dockerfile $image"
+        break
       fi
     done
   done
