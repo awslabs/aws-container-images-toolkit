@@ -7,8 +7,8 @@ function detect() {
 
 tdir=$(dirname $TARGET_DIR)/$(basename $TARGET_DIR)
 
-# iterate over all Dockerfiles and list images:
-filelist=($(find ${tdir} -type f -name Dockerfile\*))
+# iterate over all Dockerfiles / Containerfiles and list images:
+filelist=($(find ${tdir} -type f -name Dockerfile\* -o -name Containerfile\*))
 
 # capture the public registry list
 registrylist=$(cat public_registries.conf)
